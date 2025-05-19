@@ -1,0 +1,390 @@
+
+
+/* Prevent horizontal overflow */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* This hides horizontal scroll caused by oversized elements */
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+.landingPageContainer {
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("/public/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  /* height: auto; */
+   display: flex;
+  flex-direction: column;
+}
+
+.landingPageContainer nav {
+  padding-inline: 1.2rem;
+  padding-block: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15vh;
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.6rem;
+  cursor: pointer;
+
+}
+/* 
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  height: 80vh;
+  align-items: center;
+}
+
+.landingMainContainer>div:nth-child(1) {
+  font-size: 2.2rem;
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] {
+  background: #D97500;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 1.9rem;
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.landingMainContainer>div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+} */
+
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  min-height: 80vh;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* optional, in case there's not enough space */
+}
+
+.landingMainContainer > div:nth-child(1) {
+  font-size: 2vw;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] {
+  background: #D97500;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 1.9rem;
+}
+
+.landingMainContainer > div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.landingMainContainer > div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+}
+
+/* ✅ Responsive behavior below */
+@media screen and (max-width: 768px) {
+  .landingMainContainer {
+    flex-direction: column;
+    text-align: center;
+    height: auto; /* Allow height to grow */
+    padding-inline: 1rem;
+  }
+
+  .landingMainContainer > div:nth-child(2) img {
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .landingMainContainer > div:nth-child(1) {
+    font-size: 5vw;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role='button'] a {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+/* vfhbd */
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 10px;
+  text-align: center;
+  width: 100vw;
+ 
+}
+
+/* Dropdown styles */
+.dropdownMenuWrapper {
+  position: relative;
+}
+
+.dropdownToggle {
+  background-color: #FF9839;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  background-color: white;
+  color: black;
+  min-width: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+}
+
+.dropdownContent p {
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}
+
+.dropdownContent p:hover {
+  background-color: #f1f1f1;
+}
+
+/* Hide navlist at <= 408px */
+@media screen and (max-width: 408px) {
+  .navlist {
+    display: none;
+  }
+}
+
+
+#history{
+  margin-left: 3px;
+}
+
+.meetContainer {
+  display: flex;
+  padding-inline: 20px;
+  /* height: 80vh; */
+  gap: 10vw;
+  justify-content: center;
+  margin-bottom: 10vh;
+}
+
+/* @media screen and (max-width: 568px) {
+   .navBar > div {
+    margin-left: 6px;
+    width: 100%;
+   
+  }
+} */
+
+.leftPanel {
+  height: 100%;
+  display: flex;
+  /* align-items: center; */
+
+}
+
+/* .rightPanel {
+  display: flex;
+  align-items: center;
+} */
+
+.rightPanel > img {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  align-items: center;
+  margin-left: 35%;
+}
+
+
+
+@media screen and (max-width: 568px) {
+  .rightPanel > img {
+    width: 400px;
+    margin: auto;
+    margin-top: 25px;
+   
+  }
+}
+
+
+@media screen and (min-width: 750px) {
+  .navlist{
+    height: 50px;
+  }
+  #title{
+    font-size: 2.5vw;
+    text-transform: uppercase;
+  }
+  #clock{
+    font-size: 2.5vw;
+
+  }
+  #logout{
+  text-decoration: none;
+  font-size: 2.2vw;
+  margin-top: 4px;
+  text-transform: lowercase;
+  margin: 2vw;
+ }
+ #icon-clock > svg{
+  font-size: 2.3vw;
+  margin: 1vw;
+ }
+ .landingPageContainer nav h2{
+   font-size: 4vw;
+   
+ }
+ .landingPageContainer nav .navlist{
+  font-size: 2vw;
+  margin-right: 4%;
+ }
+}
+
+
+
+
+
+
+.footer {
+  background-color: #0e0e0e;
+  color: white;
+  padding: 40px 20px 20px;
+  margin-top: auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 2rem;
+}
+
+.footer-brand h2 {
+  font-size: 1.8rem;
+  color: #FF9839;
+  margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+  max-width: 300px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+}
+
+.footer-links a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #FF9839;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 1.3rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #FF9839;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #aaa;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links ul {
+    padding-left: 0;
+  }
+}
+
+
+
+#lobby{
+  padding: 8vw;
+}
